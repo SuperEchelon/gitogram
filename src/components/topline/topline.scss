@@ -1,7 +1,10 @@
-.c-topline {
-    background: #fafafa;
-    border-bottom: 1px solid #c6c6c8;
-    padding: 42px 0 32px;
+.x-container {
+    width: 1200px;
+}
+
+.headline {
+    display: flex;
+    justify-content: space-between;
 }
 
 .content {

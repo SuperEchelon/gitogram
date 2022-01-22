@@ -1,40 +1,21 @@
 <template>
-  <div class="card">
-    <div class="card__title_wrap">
-        <h2 class="card__title">{{Title}}</h2>
-    </div>
+    <div class="card">
+        <h2 class="card__title">Vue.js</h2>
     <div class="card__desc">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, iusto ipsam nam reiciendis atque beatae perferendis obcaecati voluptatum natus earum, sapiente similique magnam voluptates iure, adipisci odit? Necessitatibus, recusandae cupiditate?
+        <span class="card__feature">JavaScript</span> framework for building interactive web applications ⚡
     </div>
-  <div class="card__stats">
-      <stats :stars="10" :forks="5" />
-  </div>
+    <stats :stars="156" :forks="4" />
   </div>
 </template>
 
 <script>
-import {stats} from "./components/stats"
+import {stats} from "../stats/stats.vue"
 export default {
+    name: "card",
     components: {
         stats
-    },
-    props:{
-        title: {
-            type: String,
-            default: 'Ttiel'
-        }
     }
-};
+}
 </script>
 
-<style lang="scss" scoped>
-
-.card {
-    background: #FFFFFF;
-    border: 1px solid #F1F1F1;
-    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.07);
-    border-radius: 10px;
-    padding: 24px 20px;
-}
-
-</style>
+<style lang="scss" src="./card.scss" scoped></style>

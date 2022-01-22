@@ -1,0 +1,1 @@
+export { default as logo } from "./components/logo.vue";
