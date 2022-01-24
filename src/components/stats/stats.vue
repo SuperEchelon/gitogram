@@ -1,71 +1,44 @@
 <template>
     <div class="stats">
-        <div class="stats__border stats__right">
+        <div class="stats__border  stats__border--left stats__border--background-gray">
             <div class="stats__icon">
-             <icon icon-name="stars"/>
+             <icon name="star"/>
             </div>
-            <span>Span</span>
+            <span>Star</span>
         </div>
         <div class="stats__border">
             {{ stars }}
         </div>
-        <div class="stats__border">
+        <div class="stats__border stats__border--background-gray">
             <div class="stats__icon">
-                <icon icon-name="forks"/>
+                <icon name="fork"/>
             </div>
-            <span>forks</span>
+            <span>fork</span>
         </div>
-        <div class="stats__border stats__left">
+        <div class="stats__border stats__border--right">
             {{ forks }}
         </div>
     </div>
 </template>
 
 <script>
-import { icon } from "./components/icon";
+import { icon } from '../../icons/icon.vue'
 export default {
-    components: {
-        icon
+  name: 'stats',
+  components: {
+    icon
+  },
+  props: {
+    stars: {
+      type: Number,
+      required: true
     },
-    props: {
-        stars: {
-            type: Number,
-            required: true
-        },
-        forks: {
-            type: Number,
-            required: true
-        }
-    },
-    setup() {
-        return {};
+    forks: {
+      type: Number,
+      required: true
     }
-};
+  }
+}
 </script>
 
-<style lang="scss" scoped>
-.stats {
-    display: flex;
-    &__border {
-        border: 1px solid rgba(27, 31, 35, 0.15);
-        display: flex;
-        align-items: center;
-        padding: 0 10px;
-    }
-    &__center {
-        background: #ffffff;
-    }
-    &__right {
-        border-radius: 6px 0px 0px 6px;
-        background: #fafbfc;
-    }
-    &__left {
-        border-radius: 0px 6px 6px 0px;
-        background: #fafbfc;
-    }
-    &__icon {
-        width: 14px;
-        height: 14px;
-    }
-}
-</style>
+<style lang="scss" src="./stats.scss" scoped></style>

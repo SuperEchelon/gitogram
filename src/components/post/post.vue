@@ -2,65 +2,65 @@
   <div class="post">
     My post component
     <div class="post__user">
-        <user :src="avatarUrl" :name="username"/>
+        <div class="avatar">
+            <avatar :src="user" />
+        </div>
+            <div class="user-name">
+                {{ name }}
+            </div>
     </div>
     <div class="post__card">
         <slot name="card"/>
     </div>
-    toggler component 
-    <toggle @onToggle="toggleClick"/>
-    <div v-if="showComment">
-        <ul class="post__comment comment__list">
-            <li class="comment__item" v-for="item in 5" :key="item">
+    <div class="toggler">
+    <toggler @onToggle="toggleClick" />
+    </div>
+    <div class="post__comments comments" v-if="showComment">
+        <ul class="comment__list">
+            <li class="comment__item" v-for="n in 5" :key="n">
                 <p>
-                    <span class="comment__user">
-                        User Name
-                    </span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores labore, quos temporibus praesentium qui, enim animi quam dignissimos corporis, modi similique! Accusantium asperiores magnam numquam, unde officiis quibusdam totam vero.
+                    <span class="comment__user"> User </span>
+                    <span class="comment__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores labore, quos temporibus praesentium qui, enim animi quam dignissimos corporis, modi similique! Accusantium asperiores magnam numquam, unde officiis quibusdam totam vero.</span>
                 </p>
             </li>
         </ul>
+        <time class="post__item">15 MAY</time>
     </div>
   </div>
 </template>
 
 <script>
-import { user } from "../../components/user";
-import { comment } from '../comment/comment.vue';
-import { toggle } from "./components/toggle";
+import { avatar } from "../avatar";
+import { toggler } from "../toggler";
 export default {
+    name: "post",
     components: {
-        user,
-        toggle 
+        avatar,
+        toggler
     },
     props: {
-        avatarUrl: {
-            type:String,
-            default: "https://picsum.photos/300/300"
-        },
-        username: {
+        user: {
             type: String,
-            default: 'User Loft'
+            required: true,
+            default: "https://picsum.photos/100/100"
+        },
+        name: {
+            type: String,
+            required: true,
+            default: 'John'
         }
     },
     data () {
         return {
-            showComment: true
-        };
+            showComment: false
+        }
     },
     methods: {
         toggleClick(state) {
-            this.showComment = state;
+            this.showComment = state
         }
     }
-};
+}
 </script>
 
-<style lang="scss" scoped>
-
-.comment {
-    &__user {
-        font-weight: 600;
-    }
-}
-</style>
+<style lang="scss"  src="./post.scss" scoped></style>

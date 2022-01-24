@@ -1,1 +1,1 @@
-export { default as logo } from "./components/logo.vue";
+export { default as logo } from './logo.vue'

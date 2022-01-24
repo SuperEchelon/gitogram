@@ -1,1 +1,1 @@
-export { default as stats } from "./stats.vue";
+export { default as stats } from './stats.vue';

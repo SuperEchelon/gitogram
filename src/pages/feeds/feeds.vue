@@ -3,14 +3,14 @@
         <topline>
             <template #headline>
                 <div class="logo">
-                 <logo /> 
+                <logo />
                 </div>
                 <navBar />
             </template>
             <template #content>
                 <ul class="stories">
                     <li class="stories__item" v-for="user in users" :key="user.id">
-                        <storyUserItem :avatar="story.avatar" :username="user.name" />
+                        <storyUserItem :avatar="user.avatar" :username="user.name" />
                     </li>
                 </ul>
             </template>
@@ -28,32 +28,31 @@
         </ul>
     </div>
 </template>
-
 <script>
-    import { storyUserItem }  from "../../components/storyUserItem";
-    import { logo } from "../../components/logo";
-    import { topline } from "../../components/topline";
-    import { navBar } from "../../components/navBar";
-    import { post } from "../../components/post";
-    import { card } from "../../components/card";
-    import users from "./users.json";
+import { storyUserItem } from '../../components/storyUserItem'
+import { logo } from '../../components/logo'
+import { topline } from '../../components/topline'
+import { navBar } from '../../components/navBar'
+import { post } from '../../components/post'
+import { card } from '../../components/newCard'
+import users from './user.json'
 
-    export default {
-        name: "feeds",  
-        components: {
-            topline,
-            logo,
-            storyUserItem,
-            post,
-            card,
-            navBar
-        },
-        data() {
-            return {
-                users
-            }
-        }
+export default {
+  name: 'feeds',
+  components: {
+    topline,
+    logo,
+    storyUserItem,
+    post,
+    card,
+    navBar
+  },
+  data () {
+    return {
+      users
     }
+  }
+}
 </script>
 
 <style lang="scss" src="./feeds.scss"></style>

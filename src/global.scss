@@ -38,6 +38,7 @@ img {
 }
 
 p {
+    padding: 0;
     margin: 0;
 }
 
@@ -65,20 +66,4 @@ button {
 .x-container {
     width: 1200px;
     margin: 0 auto;
-}
-
-.fl {
-    display: flex;
-}
-
-.fl-ju-between {
-    display: flex;
-    justify-content: space-between;
-}
-
-.pointer {
-    &:hover {
-        cursor: pointer;
-        color: var(--green);
-    }
 }
