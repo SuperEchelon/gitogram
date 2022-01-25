@@ -13,23 +13,23 @@
 </template>
 
 <script>
-import { icon } from "../../icons"
-import { avatar } from "../../components/avatar"
+import { icon } from '../../icons'
+import { avatar } from '../../components/avatar'
 
 export default {
-    name: "navBar",
-        components: {
-            icon,
-            avatar
-        },
-        props: {
-            user: {
-                type: String,
-                required: true,
-                default: "https://picsum.photos/100/100"
-            }
-        }
+  name: 'navBar',
+  components: {
+    icon,
+    avatar
+  },
+  props: {
+    user: {
+      type: String,
+      required: true,
+      default: 'https://picsum.photos/100/100'
     }
+  }
+}
 </script>
 
 <style lang="scss" scr="./navBar.scss" scoped></style>

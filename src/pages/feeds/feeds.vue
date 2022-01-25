@@ -34,7 +34,7 @@ import { logo } from '../../components/logo'
 import { topline } from '../../components/topline'
 import { navBar } from '../../components/navBar'
 import { post } from '../../components/post'
-import { card } from '../../components/newCard'
+import { card } from '../../components/сard'
 import users from './user.json'
 
 export default {

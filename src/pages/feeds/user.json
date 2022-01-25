@@ -23,12 +23,12 @@
         "id": "4",
         "avatar": "https://picsum.photos/id/494/100/100",
         "name": "Piter"
-        },
+    },
     {
         "id": "5",
         "avatar": "https://picsum.photos/id/325/100/100",
         "name": "Can"
-        },
+    },
     {
         "id": "6",
         "avatar": "https://picsum.photos/id/238/100/100",
@@ -38,15 +38,15 @@
         "id": "7",
         "avatar": "https://picsum.photos/id/894/100/100",
         "name": "Diself"
-        },
+    },
     {
         "id": "8",
         "avatar": "https://picsum.photos/id/134/100/100",
         "name": "Gartor"
-        },
+    },
     {
         "id": "9",
         "avatar": "https://picsum.photos/id/284/100/100",
         "username": "Camilr"
-        }
+    }
 ]

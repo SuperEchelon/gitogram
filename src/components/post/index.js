@@ -1,1 +1,1 @@
-export { default as post } from "./post.vue"
+export { default as post } from './post.vue'

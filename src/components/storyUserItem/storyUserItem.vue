@@ -9,16 +9,16 @@
 
 <script>
 export default {
-    props: {
-        avatar: {
-            type: String,
-            required: true
-        },
-        username: {
-            type: String,
-            required: true
-        }
+  props: {
+    avatar: {
+      type: String,
+      required: true
+    },
+    username: {
+      type: String,
+      required: true
     }
+  }
 }
 </script>
 

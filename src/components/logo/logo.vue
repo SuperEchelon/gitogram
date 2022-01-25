@@ -5,9 +5,9 @@
 <script>
 import { icon } from '../../icons'
 export default {
-    name: "logo",
-    components: {
-        icon
-    }
+  name: 'logo',
+  components: {
+    icon
+  }
 }
 </script>

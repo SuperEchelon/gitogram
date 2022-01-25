@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { icon } from '../../icons/icon.vue'
+import icon from '../../icons/icon.vue'
 export default {
   name: 'stats',
   components: {

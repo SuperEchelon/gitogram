@@ -8,24 +8,24 @@
 </template>
 
 <script>
-import { icon } from "../../icons"; 
+import { icon } from '../../icons'
 
 export default {
-    components: {
-        icon
-    },
-    data() {
-        return {
-            isOpened: false,
-        }
-    },
-    methods: {
-        toggle() {
-            this.isOpened = !this.isOpened;
-            this.$emit("onToggle", this.isOpened)
-        }
-    },
-};
+  components: {
+    icon
+  },
+  data () {
+    return {
+      isOpened: false
+    }
+  },
+  methods: {
+    toggle () {
+      this.isOpened = !this.isOpened
+      this.$emit('onToggle', this.isOpened)
+    }
+  }
+}
 </script>
 
 <style scoped src="./toggler.scss" lang="scss"></style>

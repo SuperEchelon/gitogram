@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <h2 class="card__title">Vue.js</h2>
-    <div class="card__desc">
+    <div class="card__description">
         <span class="card__feature">JavaScript</span> framework for building interactive web applications ⚡
     </div>
     <stats :stars="156" :forks="4" />
@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import {stats} from "../stats/stats.vue"
+import stats from '../stats/stats.vue'
 export default {
-    name: "card",
-    components: {
-        stats
-    }
+  name: 'card',
+  components: {
+    stats
+  }
 }
 </script>
 

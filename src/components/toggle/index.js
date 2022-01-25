@@ -1,1 +1,1 @@
-export { default as toggle } from "./toggle.vue";
+export { default as toggle } from './toggle.vue'

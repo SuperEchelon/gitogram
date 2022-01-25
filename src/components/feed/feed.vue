@@ -13,25 +13,25 @@
 
 <script>
 
-import { comment } from "../comment"
-import { toggler } from "../toggler"
+import { comment } from '../comment'
+import { toggler } from '../toggler'
 
 export default {
-    name:'feed-item',
-    components: {
-        comment,
-        toggler
-    },
-    data () {
-        return {
-            shown: false
-        }
-    },
-    methods: {
-        toggle (isOpened) {
-        this.shown = isOpened
-        }
+  name: 'feed-item',
+  components: {
+    comment,
+    toggler
+  },
+  data () {
+    return {
+      shown: false
     }
+  },
+  methods: {
+    toggle (isOpened) {
+      this.shown = isOpened
+    }
+  }
 }
 </script>
 

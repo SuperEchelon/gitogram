@@ -1,6 +1,5 @@
 <template>
   <div class="post">
-    My post component
     <div class="post__user">
         <div class="avatar">
             <avatar :src="user" />
@@ -30,36 +29,36 @@
 </template>
 
 <script>
-import { avatar } from "../avatar";
-import { toggler } from "../toggler";
+import { avatar } from '../avatar'
+import { toggler } from '../toggler'
 export default {
-    name: "post",
-    components: {
-        avatar,
-        toggler
+  name: 'post',
+  components: {
+    avatar,
+    toggler
+  },
+  props: {
+    user: {
+      type: String,
+      required: true,
+      default: 'https://picsum.photos/100/100'
     },
-    props: {
-        user: {
-            type: String,
-            required: true,
-            default: "https://picsum.photos/100/100"
-        },
-        name: {
-            type: String,
-            required: true,
-            default: 'John'
-        }
-    },
-    data () {
-        return {
-            showComment: false
-        }
-    },
-    methods: {
-        toggleClick(state) {
-            this.showComment = state
-        }
+    name: {
+      type: String,
+      required: true,
+      default: 'John'
     }
+  },
+  data () {
+    return {
+      showComment: false
+    }
+  },
+  methods: {
+    toggleClick (state) {
+      this.showComment = state
+    }
+  }
 }
 </script>
 

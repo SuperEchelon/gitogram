@@ -2,40 +2,40 @@
     <div class="user">
         <Avatar class="user__avatar" :avatar="src" :size="size" />
         <div>
-            <div class="user__name">{{ name }}</div> 
-            <div v-if="type" class="user__type">{{ type }}</div> 
+            <div class="user__name">{{ name }}</div>
+            <div v-if="type" class="user__type">{{ type }}</div>
         </div>
     </div>
 </template>
 
 <script>
-import { avatar as Avatar } from "./components/avatar";
+import { avatar as Avatar } from './components/avatar'
 export default {
-    components: {
-        Avatar
+  components: {
+    Avatar
+  },
+  props: {
+    src: {
+      type: String,
+      default: 'https://picsum.photos/300/300'
     },
-    props: {
-      src: {
-        type: String,
-        default: "https://picsum.photos/300/300"
-      },
-      name: {
-        type: String,
-        default: "John Doe"
-      },
-      type: {
-        type: String,
-        default: ""
-      },
-      size: {
-        type: String,
-        default:"s"
-      }
+    name: {
+      type: String,
+      default: 'John Doe'
     },
-    setup(props) {
-        return {};
+    type: {
+      type: String,
+      default: ''
+    },
+    size: {
+      type: String,
+      default: 's'
     }
-};
+  },
+  setup (props) {
+    return {}
+  }
+}
 </script>
 
 <style lang="scss" scoped>

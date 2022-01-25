@@ -4,8 +4,8 @@
 
 <script>
 export default {
-    name: 
-    "avatar"        
+  name:
+    'avatar'
 }
 </script>
 
