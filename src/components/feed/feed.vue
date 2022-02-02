@@ -1,35 +1,37 @@
 <template>
-    <div class="c-feed">
-        <toggler @onToggle="toggle" />
-        <div class="comments" v-if="shown">
-        <ul class="comment-list">
-            <li class="comments-item" v-for="n in 5" :key="n">
-                <comment text="Some text" username="John Doe" />
-            </li>
-        </ul>
-        </div>
+    <div class="c-feed" :class="{dark}">
+      <h1>title: {{ title }}</h1>
+      <h2>owner: {{ username }}</h2>
+      <h3>stars: {{ stars }}</h3>
+      <p v-if="description">description: {{ description }}</p>
     </div>
 </template>
 
 <script>
-
-import { comment } from '../comment'
-import { toggler } from '../toggler'
+import { user } from '../../components/user'
+import { toggler } from '../../components/toggler'
 
 export default {
-  name: 'feed-item',
+  name: 'feed',
+  props: {
+    title: String,
+    username: String,
+    stars: Number,
+    dark: Boolean,
+    description: String
+  },
   components: {
-    comment,
+    user,
     toggler
   },
   data () {
     return {
-      shown: false
+      items: true
     }
   },
   methods: {
-    toggle (isOpened) {
-      this.shown = isOpened
+    toggleClick (state) {
+      this.showComment = state
     }
   }
 }

@@ -8,7 +8,12 @@
 </template>
 
 <script>
+// import { avatar } from '../avatar'
 export default {
+  name: 'storyUserItem',
+  components: {
+    // avatar
+  },
   props: {
     avatar: {
       type: String,

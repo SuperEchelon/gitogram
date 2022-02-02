@@ -9,8 +9,9 @@
             </template>
             <template #content>
                 <ul class="stories">
-                    <li class="stories__item" v-for="user in users" :key="user.id">
-                        <storyUserItem :avatar="user.avatar" :username="user.name" />
+                    <li class="stories__item" v-for="item in items" :key="item.id">
+                        <storyUserItem :avatar="item.owner.avatar_url" :username="item.owner.login" />
+                            @onPress="handlePress(item.id)" />
                     </li>
                 </ul>
             </template>
@@ -36,6 +37,7 @@ import { navBar } from '../../components/navBar'
 import { post } from '../../components/post'
 import { card } from '../../components/сard'
 import users from './user.json'
+// import * as api from '../../api'
 
 export default {
   name: 'feeds',
@@ -49,10 +51,20 @@ export default {
   },
   data () {
     return {
-      users
+      items: []
+    }
+  },
+  mathods: {},
+  async created () {
+    try {
+      // const { data } = await api.trandings.getTrendings()
+      // this.items = data.items
+    } catch (error) {
+      console.log(error)
     }
   }
 }
+console.log(users)
 </script>
 
 <style lang="scss" src="./feeds.scss"></style>

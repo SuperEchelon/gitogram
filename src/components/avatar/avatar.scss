@@ -1,3 +1,17 @@
-.avatar-img {
-    border-radius: 50%;
+.avatar {
+  overflow: hidden;
+  
+  &__img{
+    border-radius: 50px;
+    // height: 100%;
+    // width: 100%;
+    object-fit: cover;
   }
+}
+
+.avatar__img {
+  border-radius: 50px;
+  // height: 100%;
+  // width: 100%;
+  object-fit: cover;
+}

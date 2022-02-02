@@ -4,13 +4,17 @@
     padding: 0;
 
     .icon {
+        display: block;
         width: 10px;
         transform: rotate(180deg);
+        transition: 0.3s;
+
     }
 
     &.active {
         .icon {
             transform: rotate(0deg);
+            transition: 0.3s;
         }
     }
 }

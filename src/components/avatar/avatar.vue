@@ -1,11 +1,41 @@
 <template>
-    <img class="avatar-img" alt="avatar" />
+  <div class="avatar" :style="avatarStyle">
+    <img :src="src" class="avatar__img" alt="users avatar" />
+  </div>
 </template>
 
 <script>
 export default {
-  name:
-    'avatar'
+  name: 'Avatar',
+  props: {
+    src: {
+      type: String,
+      required: true
+    },
+    size: {
+      type: String,
+      default: 's'
+    }
+  },
+  setup (props) {
+    const style = {
+      s: {
+        width: '44px',
+        height: '44px'
+      },
+      m: {
+        width: '72px',
+        height: '72px'
+      },
+      l: {
+        width: '90px',
+        height: '90px'
+      }
+    }
+    const avatarStyle = style[props.size]
+
+    return { avatarStyle }
+  }
 }
 </script>
 

@@ -1,14 +1,21 @@
 .c-nav-bar {
-    width: 140px;
+    align-items: center;
     display: flex;
     justify-content: space-between;
+    width: 140px;
 }
 
 .icon {
     &-button {
         width: 25px;
+        margin-right: 16px;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
     &-avatar {
         width: 37px;
+        margin-right: 16px;
     }
 }

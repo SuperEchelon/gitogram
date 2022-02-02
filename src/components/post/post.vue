@@ -18,8 +18,8 @@
         <ul class="comment__list">
             <li class="comment__item" v-for="n in 5" :key="n">
                 <p>
-                    <span class="comment__user"> User </span>
-                    <span class="comment__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores labore, quos temporibus praesentium qui, enim animi quam dignissimos corporis, modi similique! Accusantium asperiores magnam numquam, unde officiis quibusdam totam vero.</span>
+                    <span class="comment__user"> {{Username}} </span>
+                    <span class="comment__text"> {{text}} </span>
                 </p>
             </li>
         </ul>
@@ -38,6 +38,14 @@ export default {
     toggler
   },
   props: {
+    username: {
+      type: String,
+      required: true
+    },
+    text: {
+      type: String,
+      required: true
+    },
     user: {
       type: String,
       required: true,

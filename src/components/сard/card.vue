@@ -14,6 +14,12 @@ export default {
   name: 'card',
   components: {
     stats
+  },
+  props: {
+    stars: Number,
+    forks: Number,
+    description: String,
+    title: String
   }
 }
 </script>

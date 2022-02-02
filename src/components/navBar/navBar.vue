@@ -1,15 +1,15 @@
 <template>
-    <div class="c-nav-bar">
-        <button class="icon-button">
-            <icon name="home" />
-        </button>
-        <button class="icon-button icon-avatar">
-            <avatar :src=user class="avatar" />
-        </button>
-        <button class="icon-button">
-            <icon name="exit" />
-        </button>
+  <div class="c-nav-bar">
+    <div class="icon-button">
+      <icon name="home" />
     </div>
+    <div class="icon-avatar">
+      <avatar :src="user" class="avatar" />
+    </div>
+    <div class="icon-button">
+      <icon name="exit" />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -32,4 +32,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scr="./navBar.scss" scoped></style>
+<style lang="scss" src="./navBar.scss" scoped></style>
