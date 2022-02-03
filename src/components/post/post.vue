@@ -1,20 +1,20 @@
 <template>
   <div class="post">
     <div class="post__user">
-        <div class="avatar">
-            <avatar :src="user" />
+      <div class="avatar">
+        <avatar :src="user" />
+      </div>
+        <div class="user-name">
+          {{ name }}
         </div>
-            <div class="user-name">
-                {{ name }}
-            </div>
     </div>
     <div class="post__card">
         <slot name="card"/>
     </div>
     <div class="toggler">
-    <toggler @onToggle="toggleClick" />
+      <toggler @onToggle="toggleClick" />
     </div>
-    <div class="post__comments comments" v-if="showComment">
+    <div class="post__comments comment" v-if="showComments">
         <ul class="comment__list">
             <li class="comment__item" v-for="n in 5" :key="n">
                 <p>
@@ -38,14 +38,6 @@ export default {
     toggler
   },
   props: {
-    username: {
-      type: String,
-      required: true
-    },
-    text: {
-      type: String,
-      required: true
-    },
     user: {
       type: String,
       required: true,
@@ -64,7 +56,7 @@ export default {
   },
   methods: {
     toggleClick (state) {
-      this.showComment = state
+      this.showComments = state
     }
   }
 }

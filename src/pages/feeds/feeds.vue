@@ -9,9 +9,12 @@
             </template>
             <template #content>
                 <ul class="stories">
-                    <li class="stories__item" v-for="item in items" :key="item.id">
-                        <storyUserItem :avatar="item.owner.avatar_url" :username="item.owner.login" />
-                            @onPress="handlePress(item.id)" />
+                    <li class="stories-item" v-for="story in stories" :key="story.id">
+                    <storyUserItem
+                      :avatar="story.avatar"
+                      :username="story.username"
+                      @onPress='handlePress(story.id)'
+                    />
                     </li>
                 </ul>
             </template>
@@ -51,7 +54,7 @@ export default {
   },
   data () {
     return {
-      items: []
+      story: []
     }
   },
   mathods: {},
@@ -67,4 +70,4 @@ export default {
 console.log(users)
 </script>
 
-<style lang="scss" src="./feeds.scss"></style>
+<style lang="scss" scoped src="./feeds.scss"></style>

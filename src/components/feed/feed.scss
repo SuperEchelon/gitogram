@@ -4,3 +4,12 @@
     margin-bottom: 16px;    
 }
 
+.comment {
+    &__user {
+        font-weight: 700;
+    }
+    &__item {
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+}
