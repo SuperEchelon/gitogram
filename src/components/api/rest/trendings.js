@@ -1,6 +1,7 @@
-import { makeRequest } from '../requests'
 
-const addStartingZero = (value) => value < 10 ? `0${value}` : value
+import { makeRequests } from '../requests'
+
+const addStartingZero = value => value < 10 ? `0${value}` : value
 
 export const getTrendings = (lang = 'javascript') => {
   const params = new URLSearchParams()
@@ -18,7 +19,7 @@ export const getTrendings = (lang = 'javascript') => {
   params.append('per_page', 10)
   params.append('q', `language:${lang} created:>${formattedDate}`)
 
-  return makeRequest({
+  return makeRequests({
     url: `/search/repositories?${params}`
   })
 }

@@ -1,61 +1,34 @@
 <template>
-    <div class="user">
-        <Avatar class="user__avatar" :avatar="src" :size="size" />
-        <div>
-            <div class="user__name">{{ name }}</div>
-            <div v-if="type" class="user__type">{{ type }}</div>
-        </div>
+  <div class="c-user">
+    <div class="avatar-wrap">
+      <avatar :avatar="avatar" />
     </div>
+    <div class="userName">
+      {{ userName }}
+    </div>
+  </div>
 </template>
 
 <script>
-import { avatar as Avatar } from './components/avatar'
+import avatar from '../avatar/avatar.vue'
 export default {
+  name: 'user',
   components: {
-    Avatar
+    avatar
   },
   props: {
-    src: {
+    avatar: {
       type: String,
-      default: 'https://picsum.photos/300/300'
+      required: true,
+      default: 'https://picsum.photos/100/100'
     },
-    name: {
+    userName: {
       type: String,
-      default: 'John Doe'
-    },
-    type: {
-      type: String,
-      default: ''
-    },
-    size: {
-      type: String,
-      default: 's'
+      required: true,
+      default: 'John'
     }
-  },
-  setup (props) {
-    return {}
   }
 }
 </script>
 
-<style lang="scss" scoped>
-.user {
-    display: flex;
-    align-items: center;
-    &__name {
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 18px;
-    }
-
-    &__avatar {
-        width: 44px;
-        height: 44px;
-    }
-
-    &__type {
-        font-size: 12px;
-        color: var(--lightGrey);
-    }
-}
-</style>
+<style src="./user.scss" lang="scss" scoped></style>

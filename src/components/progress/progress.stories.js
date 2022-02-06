@@ -12,11 +12,13 @@ export default {
 }
 
 const template = (args) => ({
-  components: { xProgress: progress },
+  components: { progress },
   data () {
     return { args }
   },
-  template: '<x-progress @onFinish="args.onFinish" />'
+  template: `
+  <progress @onFinish="args.onFinish" />
+  `
 })
 
 export const Default = template.bind({})

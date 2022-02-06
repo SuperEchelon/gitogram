@@ -1,14 +1,22 @@
+
 <template>
-    <button class="c-story-user-item" @click="$emit('onPress')">
-      <div class="avatar">
-        <img :src="avatar" class="img" alt="username avatar" />
-      </div>
-        <div class="username">{{ username }}</div>
+  <div class="c-story-user-item">
+    <button class="user-avatar">
+     <avatar :avatar="avatar" class="avatar" />
     </button>
+    <div class="user-name">
+      {{ username }}
+    </div>
+  </div>
 </template>
 
 <script>
+import { avatar } from '../avatar'
 export default {
+  name: 'storyUserItem',
+  components: {
+    avatar
+  },
   props: {
     avatar: {
       type: String,

@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  name: 'progress',
   data () {
     return {
       active: false
@@ -31,4 +30,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped src="./progress.scss"></style>
+<style lang="scss" src="./progress.scss" scoped></style>

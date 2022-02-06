@@ -1,32 +1,42 @@
 <template>
-  <button
-    :class="[
-      'c-button', `theme-green`,
-    {'hover-text': withHoverText}
-    ]"
-    :data-hover-text="hoverText"
-    >
-    <span class="btn-text">
-        <slot></slot>
-    </span>
-  </button>
+  <div class="c-button">
+    <button class="button" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
+      <span class="button-text" v-if="isHover">
+        {{ hoverText }}
+      </span>
+      <!-- <slot></slot> -->
+      <span class="button-text" v-if="!isHover">
+        {{ buttonText }}
+      </span>
+    </button>
+  </div>
 </template>
 
 <script>
-
 export default {
-  name: 'Button',
+  name: 'xbutton',
   props: {
     hoverText: {
       type: String
+    },
+    buttonText: {
+      type: String
     }
   },
-  computed: {
-    withHoverText () {
-      return this.hoverText && this.hoverText.length
+  data () {
+    return {
+      isHover: false
+    }
+  },
+  methods: {
+    onMouseEnter () {
+      this.isHover = true
+    },
+    onMouseLeave () {
+      this.isHover = false
     }
   }
 }
 </script>
 
-<style lang="scss" scoped src="./button.scss"></style>
+<style lang="scss" src="./button.scss" scoped></style>

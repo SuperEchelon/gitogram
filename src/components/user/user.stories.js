@@ -1,19 +1,19 @@
-import storyUserItem from './storyUserItem.vue'
-import { avatar } from '../avatar/avatar.vue'
+import user from './user.vue'
+import avatar from '../avatar/avatar.vue'
 
 export default {
-  title: 'storyUserItem',
+  title: 'user',
   component: {
-    storyUserItem
+    user
   },
   subcomponents: {
     avatar
   },
-  argsTypes: {
+  argTypes: {
     avatar: {
       type: 'text'
     },
-    username: {
+    userName: {
       type: 'text'
     }
   }
@@ -22,7 +22,7 @@ export default {
 const template = (args) => ({
   props: Object.keys(args),
   components: {
-    storyUserItem,
+    user,
     avatar
   },
   data () {
@@ -31,7 +31,7 @@ const template = (args) => ({
     }
   },
   template: `
-  <storyUserItem :avatar='args.avatar' :username='args.username'></storyUserItem>
+  <user :avatar="args.avatar"  :userName="args.userName" />
   `
 })
 
@@ -39,5 +39,5 @@ export const Default = template.bind(template)
 
 Default.args = {
   avatar: 'https://picsum.photos/100/100',
-  username: 'Join'
+  userName: 'John'
 }

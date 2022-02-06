@@ -1,10 +1,9 @@
 <template>
-    <div class="card">
-        <h2 class="card__title">Vue.js</h2>
+  <div class="card">
+    <h2 class="card__title">{{title}}</h2>
     <div class="card__description">
-        <span class="card__feature">JavaScript</span> framework for building interactive web applications ⚡
-    </div>
-    <stats :stars="156" :forks="4" />
+      <span class="card__feature">{{subtitleDesc}}</span>{{desc}}</div>
+    <stats :stars="235" :forks="4" />
   </div>
 </template>
 
@@ -16,10 +15,21 @@ export default {
     stats
   },
   props: {
-    stars: Number,
-    forks: Number,
-    description: String,
-    title: String
+    title: {
+      type: String,
+      required: true,
+      default: 'Vue.js'
+    },
+    subtitleDesc: {
+      type: String,
+      required: true,
+      default: 'JavaScript'
+    },
+    desc: {
+      type: String,
+      required: true,
+      default: ' framework for building interactive web applications ⚡'
+    }
   }
 }
 </script>

@@ -1,31 +1,37 @@
 <template>
-    <button :class="['button', { active: isOpened }]" @click="toggle">
-        <span class="text">{{ isOpened ? "Hide" : "Show" }} issues</span>
-        <span class="icon">
-            <icon name="triangle" />
-        </span>
-    </button>
+  <button :class="[{active:show}, 'toggler']" @click="onToggle">
+    <span class="toggler__title">{{ buttonText }} issues</span>
+    <span class="toggler__icon">
+      <icon name="triangle" />
+    </span>
+  </button>
 </template>
 
 <script>
-import { icon } from '../../icons'
-
+import icon from '../../icons/icon.vue'
 export default {
+  name: 'toggler',
   components: {
     icon
   },
+  emits: ['onToggle'],
   data () {
     return {
-      isOpened: false
+      show: false
+    }
+  },
+  computed: {
+    buttonText () {
+      return this.show ? 'Hide' : 'View'
     }
   },
   methods: {
-    toggle () {
-      this.isOpened = !this.isOpened
-      this.$emit('onToggle', this.isOpened)
+    onToggle () {
+      this.show = !this.show
+      this.$emit('onToggle', this.show)
     }
   }
 }
 </script>
 
-<style scoped src="./toggler.scss" lang="scss"></style>
+<style lang="scss" src="./toggler.scss" scoped></style>

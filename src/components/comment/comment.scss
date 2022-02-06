@@ -1,0 +1,19 @@
+.comment {
+  &__username {
+  margin-top:32px;
+  font-weight: 700;
+  margin-right: 10px;
+  }
+}
+.feed__username.user {
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  &.img {
+    width:44px;
+    margin-right:20px;
+  }
+}
+.posts__list {
+  margin-top:32px;
+}

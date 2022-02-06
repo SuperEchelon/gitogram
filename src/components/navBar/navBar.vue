@@ -15,7 +15,6 @@
 <script>
 import { icon } from '../../icons'
 import { avatar } from '../../components/avatar'
-
 export default {
   name: 'navBar',
   components: {

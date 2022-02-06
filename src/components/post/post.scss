@@ -1,33 +1,36 @@
 .avatar {
     width: 44px;
     margin-right: 14px;
-}
-
-.post__user {
+  }
+  
+  .post__user {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
-}
-
-.user-name {
+  }
+  
+  .user-name {
     font-size: 18px;
     font-weight: 700;
-}
-
-.post__card {
+  }
+  
+  .post__card {
     margin-bottom: 18px;
-}
-
-.toggler {
+  }
+  
+  .toggler {
     margin-bottom: 10px;
-}
-
-.comment {
+  }
+  
+  .comment {
     &__user {
-        font-weight: 700;
+      font-weight: 700;
     }
     &__item {
-        margin-bottom: 8px;
-        line-height: 1.5;
+      margin-bottom: 8px;
+      line-height: 1.5;
     }
-}
+  
+  
+    
+  }

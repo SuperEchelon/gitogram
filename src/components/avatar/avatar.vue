@@ -1,40 +1,18 @@
 <template>
-  <div class="avatar" :style="avatarStyle">
-    <img :src="src" class="avatar__img" alt="users avatar" />
+  <div class="avatar">
+    <img :src="avatar" class="avatar__img" alt="avatar" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Avatar',
+  name: 'avatar',
   props: {
-    src: {
+    avatar: {
       type: String,
-      required: true
-    },
-    size: {
-      type: String,
-      default: 's'
+      required: true,
+      default: 'https://picsum.photos/100/100'
     }
-  },
-  setup (props) {
-    const style = {
-      s: {
-        width: '44px',
-        height: '44px'
-      },
-      m: {
-        width: '72px',
-        height: '72px'
-      },
-      l: {
-        width: '90px',
-        height: '90px'
-      }
-    }
-    const avatarStyle = style[props.size]
-
-    return { avatarStyle }
   }
 }
 </script>
