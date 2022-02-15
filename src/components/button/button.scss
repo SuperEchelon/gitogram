@@ -5,12 +5,20 @@
   background-color: #31AE54;
   color: #fff;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: bold;
   margin:0 auto;
+  text-align: center;
 
 
   &:hover {
     background-color: #9E9E9E;
     cursor: pointer;
   }
+}
+
+.button-text {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  line-height: 3;
 }

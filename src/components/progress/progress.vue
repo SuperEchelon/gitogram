@@ -1,5 +1,5 @@
 <template>
-    <div :class={active} class="c-progress">
+    <div :class= "{ active }" class="c-progress">
         <div ref="indicator" class="indicator"></div>
     </div>
 </template>
@@ -11,18 +11,25 @@ export default {
       active: false
     }
   },
+  props: {
+    progressMove: Boolean
+  },
   emits: ['onFinish'],
   methods: {
     emitOnFinish () {
       this.$emit('onFinish')
+      this.active = false
     }
   },
   mounted () {
-    this.$nextTick(() => {
+    if (this.progressMove) {
       this.active = true
-    })
+    }
 
     this.$refs.indicator.addEventListener('transitionend', this.emitOnFinish)
+  },
+  updated () {
+    this.active = !!this.progressMove
   },
   beforeUnmount () {
     this.$refs.indicator.removeEventListener('transitionend', this.emitOnFinish)
@@ -30,4 +37,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./progress.scss" scoped></style>
+<style src="./progress.scss" lang="scss" scoped></style>

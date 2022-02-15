@@ -2,17 +2,20 @@ import progress from './progress.vue'
 
 export default {
   title: 'progress',
-  component: progress,
+  component: {
+    progress
+  },
   argTypes: {
     onFinish: {
-      action: 'onFinish',
-      description: 'fires when progress reaches the end'
+      action: 'onFinish'
     }
   }
 }
 
 const template = (args) => ({
-  components: { progress },
+  components: {
+    progress
+  },
   data () {
     return { args }
   },
@@ -21,4 +24,4 @@ const template = (args) => ({
   `
 })
 
-export const Default = template.bind({})
+export const Default = template.bind(template)

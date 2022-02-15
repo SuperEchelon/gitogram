@@ -1,4 +1,4 @@
-import navBar from './navBar.vue'
+import { navBar } from '../navBar/navBar.vue'
 import { avatar } from '../avatar/avatar.vue'
 import { icon } from '../../icons/icon.vue'
 

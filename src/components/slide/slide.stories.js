@@ -1,7 +1,7 @@
-import slide from './slide.vue'
-import user from '../user/user.vue'
-import progres from '../progres/progres.vue'
-import xbutton from '../button/button.vue'
+import slide from '../../components/slide/slide.vue'
+import user from '../../components/user/user.vue'
+import { progress as Progress } from '../../components/progress/progress.vue'
+import xbutton from '../../components/button/button.vue'
 
 export default {
   title: 'slide',
@@ -10,7 +10,7 @@ export default {
   },
   subcomponents: {
     user,
-    progres,
+    Progress,
     xbutton
   },
   argTypes: {
@@ -28,7 +28,7 @@ const template = (args) => ({
   components: {
     slide,
     user,
-    progres,
+    Progress,
     xbutton
   },
   data () {

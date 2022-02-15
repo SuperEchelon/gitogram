@@ -1,5 +1,5 @@
 import post from './post.vue'
-import card from '../card/card.vue'
+import card from '../../components/сard/card.vue'
 
 export default {
   title: 'post',
